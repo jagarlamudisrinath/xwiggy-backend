@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: com.xwiggy.food.XwiggyApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 2.104 s <<< FAILURE! - in com.xwiggy.food.XwiggyApplicationTests
+checkCartDb(com.xwiggy.food.XwiggyApplicationTests)  Time elapsed: 0.155 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.xwiggy.food.XwiggyApplicationTests.checkCartDb(XwiggyApplicationTests.java:61)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.xwiggy.food.XwiggyApplicationTests.checkCartDb(XwiggyApplicationTests.java:61)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'cart0_.quantity4' in 'field list'
+	at com.xwiggy.food.XwiggyApplicationTests.checkCartDb(XwiggyApplicationTests.java:61)
+
+checkFoodTable(com.xwiggy.food.XwiggyApplicationTests)  Time elapsed: 0.044 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.xwiggy.food.XwiggyApplicationTests.checkFoodTable(XwiggyApplicationTests.java:54)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.xwiggy.food.XwiggyApplicationTests.checkFoodTable(XwiggyApplicationTests.java:54)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'food0_.price' in 'field list'
+	at com.xwiggy.food.XwiggyApplicationTests.checkFoodTable(XwiggyApplicationTests.java:54)
+
+contextLoads(com.xwiggy.food.XwiggyApplicationTests)  Time elapsed: 0.032 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.xwiggy.food.XwiggyApplicationTests.contextLoads(XwiggyApplicationTests.java:43)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.xwiggy.food.XwiggyApplicationTests.contextLoads(XwiggyApplicationTests.java:43)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'user0_.merchant' in 'field list'
+	at com.xwiggy.food.XwiggyApplicationTests.contextLoads(XwiggyApplicationTests.java:43)
+
